@@ -1,0 +1,245 @@
+@import "../../vendor/fonts/fonts.css";
+
+.navigation {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  height: 74px;
+  background-color: #ffffff;
+}
+
+.navigation__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 89%;
+  margin: 0 auto 0 auto;
+}
+
+.navigation__logo {
+  width: 38px;
+  height: 38px;
+  background-image: url(../../images/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto 0 0;
+  transition: opacity, 0s, ease-out, 0.3s;
+}
+
+.navigation__logo:hover {
+  opacity: 0.7;
+}
+
+.navigation__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navigation__nav {
+  }
+}
+
+.navigation__button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity, 0s, ease-out, 0.3s;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__button {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.navigation__button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__button:hover {
+    text-decoration: underline;
+  }
+}
+
+.navigation__button_movies {
+  font-weight: normal;
+  margin: 0 0 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__button_movies {
+    font-weight: 500;
+    margin: 28px auto 0 auto;
+  }
+}
+
+.navigation__button_profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../images/accaunt.svg");
+  background-position: 10px;
+  background-size: 12px 14px;
+  background-repeat: no-repeat;
+  width: 86px;
+  height: 32px;
+  border-radius: 50px;
+  border: rgba(170, 170, 170, 0.2) solid 2px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0 0 0 12px;
+  margin: 0 0 0 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__button_profile {
+    display: flex;
+    margin: 621px auto 90px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navigation__button_profile {
+    margin: 444px auto 46px auto;
+  }
+}
+
+.navigation__burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__burger {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-image: url("../../images/burger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: #ffffff;
+    margin: 0 0 0 auto;
+    padding: 14px 8px 10px 8px;
+    transition: opacity, 0s, ease-out, 0.3s;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navigation__burger {
+    width: 40px;
+    height: 43px;
+    padding: 12px 9px 10px 9px;
+  }
+}
+
+.navigation__burger:hover {
+  opacity: 0.7;
+}
+
+.navigation__menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.7s, opacity 0.7s linear;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__menu_opened {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.navigation__box {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 68%;
+  margin: 0 0 0 auto;
+  overflow: auto;
+}
+
+@media screen and (max-width: 420px) {
+  .navigation__box {
+    width: 100%;
+  }
+}
+
+.navigation__close {
+  position: absolute;
+  background-image: url("../../images/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: #ffffff;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  transition: opacity, 0s, ease-out, 0.3s;
+  cursor: pointer;
+  top: 29px;
+  right: 29px;
+}
+
+@media screen and (max-width: 320px) {
+  .navigation__close {
+    top: 13px;
+    right: 13px;
+  }
+}
+
+.navigation__close:hover {
+  opacity: 0.7;
+}
+
+.navigation__menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 159px auto auto auto;
+}
+
+@media screen and (max-width: 320px) {
+  .navigation__menu-nav {
+    margin: 144px auto auto auto;
+  }
+}

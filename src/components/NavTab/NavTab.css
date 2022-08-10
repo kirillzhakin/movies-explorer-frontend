@@ -1,0 +1,45 @@
+@import "../../vendor/fonts/fonts.css";
+
+.navtab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 1);
+  height: 66px;
+  margin: 0;
+}
+
+.navtab__nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .navtab__nav {
+    column-gap: 24px;
+  }
+}
+
+.navtab__button {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity, 0s, ease-out, 0.3s;
+}
+
+@media screen and (max-width: 320px) {
+  .navtab__button {
+    font-size: 11px;
+  }
+}
+
+.navtab__button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,169 @@
+@import "../../vendor/fonts/fonts.css";
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.project__about {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  width: 89%;
+  height: 51px;
+  border-bottom: #000000 solid 1px;
+  margin: 110px auto 70px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .project__about {
+    width: 87%;
+    margin: 90px auto 70px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__about {
+    width: 284px;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 70px auto 60px auto;
+  }
+}
+
+.project__container {
+  width: 89%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 40px;
+  row-gap: 26px;
+  margin: 0 auto 110px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .project__container {
+    width: 87%;
+    margin: 0 auto 93px auto;
+    column-gap: 30px;
+    row-gap: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__container {
+    width: 284px;
+    grid-template-columns: repeat(1, auto);
+    grid-auto-flow: row;
+    row-gap: 16px;
+    margin: 0 auto 60px auto;
+  }
+}
+
+.project__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .project__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.project__text_head {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 320px) {
+  .project__text_head {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__text_order_1 {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__text_order_2 {
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__text_order_3 {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__text_order_4 {
+    order: 4;
+  }
+}
+
+.project__calendar {
+  width: 89%;
+  display: grid;
+  grid-template-columns: minmax(100px, 228px) minmax(184px, 912px);
+  column-gap: 0;
+  row-gap: 0;
+  margin: 0 auto 105px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .project__calendar {
+    margin: 0 auto 85px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__calendart {
+    margin: 0 auto 58px auto;
+  }
+}
+
+.project__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  height: 36px;
+  color: rgba(160, 160, 160, 1);
+}
+
+@media screen and (max-width: 320px) {
+  .project__box {
+    font-size: 11px;
+    line-height: 13px;
+    height: 35px;
+  }
+}
+
+.project__box_green {
+  font-weight: normal;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(43, 224, 128, 1);
+}
+.project__box_gray {
+  font-weight: normal;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(242, 242, 242, 1);
+}

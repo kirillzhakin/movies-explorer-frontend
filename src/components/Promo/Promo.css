@@ -1,0 +1,45 @@
+@import "../../vendor/fonts/fonts.css";
+
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 524px;
+  font-weight: normal;
+  font-size: 31px;
+  line-height: 39px;
+  background-color: rgba(7, 48, 66, 1);
+  color: #ffffff;
+  background-image: url("../../images/landing-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .promo {
+    height: 784px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .promo {
+    height: 570px;
+    background-size: 248px 248px;
+  }
+}
+
+.promo__about {
+  width: 730px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+  margin: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .promo__about {
+    font-size: 31px;
+    line-height: 39px;
+  }
+}
