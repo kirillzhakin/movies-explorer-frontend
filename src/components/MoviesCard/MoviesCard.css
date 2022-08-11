@@ -1,8 +1,29 @@
 @import "../../vendor/fonts/fonts.css";
 
+.element {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  max-height: 218px;
+}
+
 .element__video {
   width: 100%;
-  height: 56%;
+  height: 151px;
+  border-radius: 10px 10px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .element__video {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .element__video {
+    height: 168px;
+  }
 }
 
 .element__video[poster] {
@@ -12,28 +33,19 @@
 
 .element__container {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  height: 60px;
-  border-bottom: rgba(232, 232, 232, 1) solid 1px;
+  margin: 0;
 }
 
 .element__title {
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
-  margin: 14px auto auto 0;
-}
-
-@media screen and (max-width: 320px) {
-  .element__title {
-    font-size: 12px;
-    line-height: 15px;
-    margin: 15px auto auto 0;
-  }
+  margin: 14px auto 10px 12px;
 }
 
 .element__delete {
+  display: flex;
   width: 24px;
   height: 24px;
   border-radius: 45px;
@@ -43,7 +55,7 @@
   background-image: url("../../images/delete.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(245, 245, 245, 1);
+  background-color: #ffffff;
   cursor: pointer;
   transition: opacity, 0s, ease-out, 0.5;
 }
@@ -54,16 +66,13 @@
 
 .element__like {
   display: flex;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   border-radius: 45px;
   border: none;
-  padding: 0;
-  margin: 11px 0 auto;
-  background-image: url("../../images/like_red.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgba(245, 245, 245, 1);
+  margin: 14px 12px auto auto;
+  background-image: url("../../images/like_off.svg");
+  box-shadow: 0 0 2px 2px rgba(244, 244, 244, 0.5);
   cursor: pointer;
   transition: opacity, 0s, ease-out, 0.5;
 }
@@ -77,12 +86,5 @@
   font-size: 11px;
   line-height: 13px;
   color: rgba(160, 160, 160, 1);
-  margin: 6px auto 0 0;
-}
-
-@media screen and (max-width: 320px) {
-  .element__time {
-    font-size: 10px;
-    line-height: 12px;
-  }
+  margin: 0 auto 14px 12px;
 }

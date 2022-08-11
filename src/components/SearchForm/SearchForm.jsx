@@ -9,16 +9,14 @@ function SearchForm() {
     <section className="search">
       <div className="search__container">
         <form className="form">
-          <div className="form__top">
-            <button className="form__submit" type="submit"></button>
-          </div>
-          <div className="form__bottom">
-            <input className="form__input" type="text" placeholder="Фильм" />
-          </div>
+          <input className="form__input" type="text" placeholder="Фильм" />
+          <button className="form__submit" type="submit">
+            Найти
+          </button>
         </form>
         <div className="search__short-films">
-          <p className="search__text">Короткометражки</p>
           <FilterCheckbox />
+          <p className="search__text">Короткометражки</p>
         </div>
       </div>
     </section>

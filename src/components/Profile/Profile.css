@@ -87,6 +87,7 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 16px;
+  color: #000000;
   cursor: pointer;
   transition: opacity, 0s, ease-out, 0.3;
 }

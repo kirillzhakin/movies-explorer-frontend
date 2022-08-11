@@ -3,7 +3,7 @@
 .aboutme {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: rgba(250, 250, 250, 1);
 }
 
 .aboutme__about {

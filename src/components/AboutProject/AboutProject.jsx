@@ -23,7 +23,7 @@ function AboutProject() {
       </div>
 
       <div className="project__calendar">
-        <div className="project__box project__box_green">1 неделя</div>
+        <div className="project__box project__box_blue">1 неделя</div>
         <div className="project__box project__box_gray">4 недели</div>
         <div className="project__box">Back-end</div>
         <div className="project__box">Front-end</div>

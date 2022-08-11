@@ -3,7 +3,7 @@
 .project {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: rgba(250, 250, 250, 1);
 }
 
 .project__about {
@@ -157,10 +157,10 @@
   }
 }
 
-.project__box_green {
+.project__box_blue {
   font-weight: normal;
-  color: rgba(0, 0, 0, 1);
-  background-color: rgba(43, 224, 128, 1);
+  color: #FFFFFF;
+  background-color: #3456F3;
 }
 .project__box_gray {
   font-weight: normal;

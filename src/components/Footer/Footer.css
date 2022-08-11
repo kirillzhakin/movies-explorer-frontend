@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 1280px;
-  background-color: #ffffff;
+  background-color: rgba(248, 248, 248, 1);
 }
 
 .footer__project-name {

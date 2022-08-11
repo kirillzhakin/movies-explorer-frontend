@@ -5,13 +5,13 @@ header {
   align-items: center;
   max-width: 1280px;
   height: 74px;
-  background-color: rgba(7, 48, 66, 1);
+  background-color: rgba(221, 222, 227, 1);
 }
 
 .header__img {
   width: 38px;
   height: 38px;
-  margin: 0 auto 0 60px;
+  margin: 0 auto 0 70px;
 }
 
 @media screen and (max-width: 768px) {
@@ -69,7 +69,7 @@ header {
   width: 77px;
   background-color: transparent;
   border: none;
-  color: #ffffff;
+  color: #000000;
   margin: 0;
   align-items: center;
   justify-content: right;
@@ -79,8 +79,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(43, 224, 128, 1);
-  color: rgba(0, 0, 0, 1);
+  background-color: rgba(52, 86, 243, 1);
+  color: #ffffff;
   border: none;
   border-radius: 3px;
   margin: 0 0 0 30px;
