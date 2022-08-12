@@ -72,13 +72,15 @@
 }
 
 .portfolio__link {
+  display: flex;
   font-weight: normal;
   font-size: 30px;
   line-height: 50px;
   text-decoration: none;
   color: black;
   cursor: pointer;
-  transition: opacity, 0s, ease-out, 0.3;
+  transition: opacity, 0s, ease-out, 0.9;
+  width: 100%;
   margin: 0 auto 0 0;
 }
 
@@ -95,9 +97,12 @@
   }
 }
 .portfolio__link:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .portfolio__img {
-  margin: 0 0 auto 0;
+  width: 15px;
+  height: 56px;
+  margin: 0 0 0 auto;
+  padding: 0;
 }

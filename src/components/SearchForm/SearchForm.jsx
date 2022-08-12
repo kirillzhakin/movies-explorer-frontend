@@ -9,7 +9,12 @@ function SearchForm() {
     <section className="search">
       <div className="search__container">
         <form className="form">
-          <input className="form__input" type="text" placeholder="Фильм" />
+          <input
+            className="form__input"
+            type="text"
+            placeholder="Фильм"
+            required
+          />
           <button className="form__submit" type="submit">
             Найти
           </button>

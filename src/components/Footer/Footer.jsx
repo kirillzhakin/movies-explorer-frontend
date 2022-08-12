@@ -13,17 +13,26 @@ function Footer() {
             <a
               href="https://practicum.yandex.ru"
               className="footer__social-icons_link"
+              target="blank"
             >
               Яндекс.Практикум
             </a>
           </li>
           <li>
-            <a href="https://github.com" className="footer__social-icons_link">
+            <a
+              href="https://github.com"
+              className="footer__social-icons_link"
+              target="blank"
+            >
               Github
             </a>
           </li>
           <li>
-            <a href="https://vk.com" className="footer__social-icons_link">
+            <a
+              href="https://vk.com"
+              className="footer__social-icons_link"
+              target="blank"
+            >
               VK
             </a>
           </li>

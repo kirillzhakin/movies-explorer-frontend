@@ -6,6 +6,12 @@
   background-color: rgba(245, 245, 245, 1);
 }
 
+@media screen and (max-width: 320px) {
+  .techs {
+    background-color: rgba(250, 250, 250, 1);
+  }
+}
+
 .techs__about {
   font-weight: normal;
   font-size: 22px;

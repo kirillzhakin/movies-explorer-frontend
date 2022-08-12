@@ -13,28 +13,31 @@ function Portfolio() {
           <a
             href="https://github.com/kirillzhakin/first-project"
             className="portfolio__link"
+            target="blank"
           >
             Статичный сайт
+            <img src={arrow} alt="Стрелка" className="portfolio__img" />
           </a>
-          <img src={arrow} alt="Стрелка" className="portfolio__img" />
         </li>
         <li className="portfolio__link-box">
           <a
             href="https://github.com/kirillzhakin/second-project"
             className="portfolio__link"
+            target="blank"
           >
             Адаптивный сайт
+            <img src={arrow} alt="Стрелка" className="portfolio__img" />
           </a>
-          <img src={arrow} alt="Стрелка" className="portfolio__img" />
         </li>
         <li className="portfolio__link-box">
           <a
             href="https://github.com/kirillzhakin/mesto"
             className="portfolio__link"
+            target="blank"
           >
             Одностраничное приложение
+            <img src={arrow} alt="Стрелка" className="portfolio__img" />
           </a>
-          <img src={arrow} alt="Стрелка" className="portfolio__img" />
         </li>
       </ul>
     </section>

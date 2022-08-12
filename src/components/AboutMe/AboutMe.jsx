@@ -16,7 +16,11 @@ function AboutMe() {
 
           <ul className="aboutme__social-icons">
             <li>
-              <a href="https://vk.com" className="aboutme__social-icons_link">
+              <a
+                href="https://vk.com"
+                className="aboutme__social-icons_link"
+                target="blank"
+              >
                 VK
               </a>
             </li>
@@ -25,6 +29,7 @@ function AboutMe() {
               <a
                 href="https://github.com"
                 className="aboutme__social-icons_link"
+                target="blank"
               >
                 Github
               </a>
