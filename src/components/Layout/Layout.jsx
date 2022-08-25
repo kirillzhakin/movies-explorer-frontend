@@ -6,13 +6,14 @@ import Navigation from "../Navigation/Navigation";
 import { useLocation } from "react-router-dom";
 
 function Layout(props) {
+
   let location = useLocation();
   return (
     <>
-      {location.pathname === "/" && <Header />}
-      {location.pathname !== "/" &&
-        location.pathname !== "/signup" &&
-        location.pathname !== "/signin" && (
+      {location.pathname === "/" && !props.isMenu && <Header />}
+      {location.pathname !== "/signup" &&
+        location.pathname !== "/signin" &&
+        props.isMenu && (
           <Navigation
             isMenuOpen={props.isMenuOpen}
             handleMenuClick={props.handleMenuClick}

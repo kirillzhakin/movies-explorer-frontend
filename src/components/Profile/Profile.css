@@ -57,6 +57,13 @@
   line-height: 13px;
   margin: 0;
   text-align: end;
+  border: none;
+}
+
+.profile__user:focus {
+  outline: none;
+  border: none;
+  border-bottom: rgba(52, 86, 243, 1) solid 1px;
 }
 
 .profile__nav {
@@ -82,6 +89,7 @@
 
 .profile__button {
   display: flex;
+  padding: 0;
   margin: 0;
   text-decoration: none;
   font-weight: normal;
@@ -107,4 +115,38 @@
   font-weight: 500;
   color: rgba(255, 0, 77, 1);
   margin: 16px 0 0 0;
+}
+
+.profile__button_redact {
+  border: none;
+  background-color: #ffffff;
+}
+
+.profile__error {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(238, 52, 101, 1);
+  margin: 10px 0 0 0;
+}
+
+.profile__button_disabled {
+  opacity: 0.8;
+}
+
+.profile__message {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  min-height: 13px;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.profile__message_type_error {
+  color: #ee3465;
+}
+
+.profile__message_type_success {
+  color: #2be080;
 }
