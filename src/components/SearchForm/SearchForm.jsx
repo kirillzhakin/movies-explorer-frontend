@@ -21,7 +21,6 @@ function SearchForm({
   }, []);
 
   function handleChange(e) {
-    console.log(e.target.value);
     setSearch(e.target.value);
   }
 

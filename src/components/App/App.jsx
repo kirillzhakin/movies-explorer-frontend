@@ -186,10 +186,12 @@ function App() {
   }
 
   function getInitialMovies() {
-    movi.getInitialMovies()
-    .then((data) => {
-      setAllMovies(data);
-      localStorage.setItem("loadedMovies", JSON.stringify(data))
+    movi
+      .getInitialMovies()
+      .then((data) => {
+        setAllMovies(data);
+        localStorage.setItem("loadedMovies", JSON.stringify(data));
+      })
       .catch((err) => {
         localStorage.removeItem("loadedMovies");
         console.log(`Ошибка ${err}, попробуйте еще раз`);
@@ -202,15 +204,16 @@ function App() {
           setLoadingError("");
         }, 3000);
       });
-    });
   }
 
   function getSavedMovies() {
     const token = localStorage.getItem("token");
-    main.getSavedMovies(token)
-    .then((data) => {
-      setSavedMovies(data);
-      localStorage.setItem("savedMovies", JSON.stringify(data))
+    main
+      .getSavedMovies(token)
+      .then((data) => {
+        setSavedMovies(data);
+        localStorage.setItem("savedMovies", JSON.stringify(data));
+      })
       .catch((err) => {
         localStorage.removeItem("savedMovies");
         console.log(`Ошибка ${err}, попробуйте еще раз`);
@@ -223,7 +226,6 @@ function App() {
           setLoadingError("");
         }, 3000);
       });
-    });
   }
 
   // Запрос данных с сервера
@@ -297,7 +299,6 @@ function App() {
   function handleSearchMovies(name) {
     setIsLoading(true);
     const newMovies = searchMovies(allMovies, name);
-    console.log(newMovies);
     if (newMovies.length === 0) {
       setMovies(newMovies);
       localStorage.setItem("filteredMovies", JSON.stringify(newMovies));
