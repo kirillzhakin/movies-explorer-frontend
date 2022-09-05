@@ -2,15 +2,15 @@ import React from "react";
 
 import "./FilterCheckbox.css";
 
-function FilterCheckbox(props) {
+function FilterCheckbox({ checkBoxClick, isShort }) {
   return (
     <section className="checkbox">
       <input
         type="checkbox"
         id="switch"
         className="checkbox__input"
-        onChange={props.onChange}
-        checked={props.isChecked}
+        onChange={checkBoxClick}
+        checked={isShort}
       />
       <label htmlFor="switch" className="checkbox__label"></label>
     </section>

@@ -45,13 +45,8 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-  .navigation__nav {
-  }
-}
-
 .navigation__button {
-  font-weight: 500;
+  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   cursor: pointer;
@@ -79,14 +74,16 @@
   }
 }
 
+.active {
+  font-weight: 500;
+}
+
 .navigation__button_movies {
-  font-weight: normal;
   margin: 0 0 0 20px;
 }
 
 @media screen and (max-width: 768px) {
   .navigation__button_movies {
-    font-weight: 500;
     margin: 28px auto 0 auto;
   }
 }
@@ -103,7 +100,6 @@
   height: 32px;
   border-radius: 50px;
   border: rgba(170, 170, 170, 0.2) solid 2px;
-  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   padding: 0 0 0 12px;

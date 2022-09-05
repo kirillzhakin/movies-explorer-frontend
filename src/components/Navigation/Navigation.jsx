@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Navigation.css";
 
@@ -8,12 +8,12 @@ function Navigation(props) {
   return (
     <header className="navigation">
       <div className="navigation__container">
-        <Link
+        <NavLink
           className="navigation__logo"
           type="button"
           aria-label="Главная"
           to="/"
-        ></Link>
+        ></NavLink>
 
         <button
           className="navigation__burger"
@@ -37,45 +37,45 @@ function Navigation(props) {
 
             <ul className="navigation__menu-nav">
               <li>
-                <Link
+                <NavLink
                   className="navigation__button"
                   type="button"
-                  aria-label="Фильмы"
-                  to="/movies"
+                  aria-label="Главная"
+                  to="/"
                 >
                   Главная
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   className="navigation__button navigation__button_movies"
                   type="button"
                   aria-label="Фильмы"
                   to="/movies"
                 >
                   Фильмы
-                </Link>
+                </NavLink>
               </li>
 
               <li>
-                <Link
+                <NavLink
                   className="navigation__button navigation__button_movies"
                   type="button"
                   aria-label="Сохранённые фильмы"
                   to="/saved-movies"
                 >
                   Сохранённые фильмы
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   className="navigation__button navigation__button_profile"
                   type="button"
                   aria-label="Аккаунт"
                   to="/profile"
                 >
                   Аккаунт
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -83,34 +83,34 @@ function Navigation(props) {
 
         <ul className="navigation__nav">
           <li>
-            <Link
+            <NavLink
               className="navigation__button"
               type="button"
               aria-label="Фильмы"
               to="/movies"
             >
               Фильмы
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               className="navigation__button navigation__button_movies"
               type="button"
               aria-label="Сохранённые фильмы"
               to="/saved-movies"
             >
               Сохранённые фильмы
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               className="navigation__button navigation__button_profile"
               type="button"
               aria-label="Аккаунт"
               to="/profile"
             >
               Аккаунт
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

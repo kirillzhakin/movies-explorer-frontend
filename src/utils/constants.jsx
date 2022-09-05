@@ -4,9 +4,9 @@ export const MOVIES_URL = "https://api.nomoreparties.co";
 export const SHORT_MOVIE_DURATION = 40;
 
 export const WINDOW_WIDTH = {
-  LARGE: 1279,
-  MEDIUM: 970,
-  SMALL: 641,
+  LARGE: 1280,
+  MEDIUM: 768,
+  SMALL: 480,
 };
 export const NUMBER_OF_CARD = {
   MAX: 12,
@@ -14,6 +14,7 @@ export const NUMBER_OF_CARD = {
   MIN: 5,
 };
 export const ADDING_CARDS = {
-  MAX: 3,
+  MAX: 4,
+  MEAN: 3,
   MIN: 2,
 };

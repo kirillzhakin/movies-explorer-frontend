@@ -1,86 +1,52 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import { SHORT_MOVIE_DURATION } from "../../utils/constants";
 
-function SavedMovies(props) {
-  const [isChecked, setIsShortMoviesChecked] = useState(false);
-  const [movies, setMovies] = useState([]);
-  const [searchWord, setSearchWord] = useState("");
-  const [notFoundMovies, setNotFoundMovies] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+function SavedMovies({
+  onMovieDelete,
+  isLoading,
+  savedMovies,
+  loadingError,
+  searchKeyword,
+}) {
+  const [checkBoxActive, setCheckBoxActive] = useState(false);
+  const [filter, setFilter] = useState("");
 
   const saved = true;
 
-  useEffect(() => {
-    setMovies(props.movies);
-    setNotFoundMovies(props.notFoundMovies);
-    setIsLoading(props.isLoading);
-  }, [props.isLoading, props.movies, props.notFoundMovies]);
+  const filterShortMovies = (filterMovies) =>
+    filterMovies.filter((m) => m.duration < SHORT_MOVIE_DURATION);
 
-  function handleSearch(searchWord) {
-    setSearchWord(searchWord);
+  function checkBoxClick() {
+    setCheckBoxActive(!checkBoxActive);
   }
 
-  const handleSearchCheck = (movies, ef, searchWord) => {
-    const filterRegex = new RegExp(searchWord, "gi");
-    return movies.filter((movie) => {
-      if (ef) {
-        return (
-          movie.duration <= SHORT_MOVIE_DURATION &&
-          filterRegex.test(movie.nameRU)
-        );
-      } else {
-        return filterRegex.test(movie.nameRU);
-      }
-    });
-  };
-
-  function handleShortMoviesChecked(e) {
-    const ef = e.target.checked;
-    if (ef) {
-      const allMovies = JSON.parse(localStorage.getItem("movies"));
-      const searchSavedResult = handleSearchCheck(allMovies, ef, searchWord);
-      setIsShortMoviesChecked(true);
-      if (searchSavedResult.length === 0) {
-        setNotFoundMovies(true);
-        setMovies([]);
-        setIsLoading(false);
-      } else {
-        setMovies(searchSavedResult);
-        setNotFoundMovies(false);
-      }
-    } else {
-      const allMovies = JSON.parse(localStorage.getItem("movies"));
-      const searchSavedResult = handleSearchCheck(allMovies, ef, searchWord);
-      setIsShortMoviesChecked(false);
-      if (searchSavedResult.length === 0) {
-        setNotFoundMovies(true);
-        setMovies([]);
-        setIsLoading(false);
-      } else {
-        setMovies(searchSavedResult);
-        setNotFoundMovies(false);
-      }
-    }
-  }
+  const filteredMovies = useMemo(
+    () =>
+      savedMovies.filter((m) =>
+        m.nameRU.toLowerCase().includes(filter.toLowerCase())
+      ),
+    [filter, savedMovies]
+  );
 
   return (
     <main className="content">
       <SearchForm
-        onSearchMovies={props.onSearchMovies}
-        onShortMoviesCheck={handleShortMoviesChecked}
-        onSearchSavedMovies={props.onSearchSavedMovies}
-        isChecked={isChecked}
-        saved={saved}
-        onSearch={handleSearch}
+        isLoading={isLoading}
+        onSubmit={setFilter}
+        checkBoxClick={checkBoxClick}
+        searchKeyword={searchKeyword}
       />
       <MoviesCardList
-        saved={saved}
-        movies={movies}
-        onMovieDelete={props.onMovieDelete}
+        savedMovies={savedMovies}
+        movies={
+          checkBoxActive ? filterShortMovies(filteredMovies) : filteredMovies
+        }
+        onMovieDelete={onMovieDelete}
         isLoading={isLoading}
-        notFoundMovies={notFoundMovies}
+        loadingError={loadingError}
+        saved={saved}
       />
     </main>
   );

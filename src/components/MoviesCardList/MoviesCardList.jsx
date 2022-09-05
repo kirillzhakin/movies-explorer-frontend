@@ -9,7 +9,14 @@ import {
   WINDOW_WIDTH,
 } from "../../utils/constants";
 
-function MoviesCardList(props) {
+function MoviesCardList({
+  onMoviesLike,
+  onMovieDelete,
+  savedMovies,
+  movies,
+  loadingError,
+  saved,
+}) {
   let location = useLocation();
 
   useEffect(() => {
@@ -28,29 +35,39 @@ function MoviesCardList(props) {
       return NUMBER_OF_CARD.MAX;
     }
   });
-  const [moreCards] = useState(() => {
+
+  const [moreCards, setMoreCards] = useState(() => {
     const windowSize = window.innerWidth;
-    if (windowSize <= WINDOW_WIDTH.MEDIUM) {
+    if (windowSize < WINDOW_WIDTH.SMALL) {
       return ADDING_CARDS.MIN;
-    } else if (windowSize >= WINDOW_WIDTH.MEDIUM + 1) {
+    } else if (windowSize <= WINDOW_WIDTH.MEDIUM) {
+      return ADDING_CARDS.MIN;
+    } else if (windowSize < WINDOW_WIDTH.LARGE) {
+      return ADDING_CARDS.MEAN;
+    } else if (windowSize > WINDOW_WIDTH.LARGE) {
       return ADDING_CARDS.MAX;
     }
   });
 
   function handleScreenWidth() {
     const windowSize = window.innerWidth;
+
     if (windowSize < WINDOW_WIDTH.SMALL) {
       setInitialCardsCurrent(NUMBER_OF_CARD.MIN);
+      setMoreCards(ADDING_CARDS.MIN);
     } else if (windowSize <= WINDOW_WIDTH.MEDIUM) {
       setInitialCardsCurrent(NUMBER_OF_CARD.MEAN);
+      setMoreCards(ADDING_CARDS.MIN);
     } else if (windowSize < WINDOW_WIDTH.LARGE) {
       setInitialCardsCurrent(NUMBER_OF_CARD.MAX);
+      setMoreCards(ADDING_CARDS.MEAN);
     } else if (windowSize > WINDOW_WIDTH.LARGE) {
       setInitialCardsCurrent(NUMBER_OF_CARD.MAX);
+      setMoreCards(ADDING_CARDS.MAX);
     }
   }
 
-  const displayMovies = props.movies?.slice(0, initialCardsCurrent);
+  const displayMovies = movies?.slice(0, initialCardsCurrent);
 
   function handleMoviesIncrease() {
     setInitialCardsCurrent((prevState) => {
@@ -60,16 +77,18 @@ function MoviesCardList(props) {
 
   return (
     <section className="elements">
-      {props.notFoundMovies && <span className="elements__not-found">Ничего не найдено</span>}
+      <span className="elements__not-found">{loadingError}</span>
+
       <div className="elements__container">
         {displayMovies?.map((movie) => {
           return (
             <MoviesCard
-              onMovieDelete={props.onMovieDelete}
-              saved={props.saved}
-              onMoviesLike={props.onMoviesLike}
-              key={props.saved ? movie._id : movie.id}
+              onMoviesLike={onMoviesLike}
+              onMovieDelete={onMovieDelete}
+              savedMovies={savedMovies}
+              key={movie.id}
               movie={movie}
+              saved={saved}
             />
           );
         })}
@@ -77,7 +96,7 @@ function MoviesCardList(props) {
       {location.pathname !== "/saved-movies" && (
         <button
           className={`elements__button ${
-            props.movies?.length === displayMovies?.length
+            movies?.length === displayMovies?.length
               ? "elements__button_invisible"
               : ""
           }`}

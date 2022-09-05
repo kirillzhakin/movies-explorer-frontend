@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import AuthForm from "../AuthForm/AuthForm";
 
@@ -8,6 +8,7 @@ function Login(props) {
   return (
     <div className="login">
       <AuthForm
+        isLoading={props.isLoading}
         onLogin={props.onLogin}
         errorMessage={props.errorMessage}
         onClear={props.onClear}

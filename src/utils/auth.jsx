@@ -23,7 +23,6 @@ export function login(email, password) {
 }
 
 export function checkToken(token) {
-  console.log(`Это токен ${token}`);
   return fetch(`${MAIN_URL}/users/me`, {
     method: "GET",
     headers: {

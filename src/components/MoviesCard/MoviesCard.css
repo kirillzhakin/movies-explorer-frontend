@@ -30,12 +30,6 @@
   }
 }
 
-.element__link {
-  display: flex;
-  width: 100%;
-  min-height: 151px;
-}
-
 .element__img {
   display: flex;
   width: 100%;

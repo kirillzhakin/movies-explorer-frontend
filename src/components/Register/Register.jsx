@@ -8,6 +8,7 @@ function Register(props) {
   return (
     <div className="register">
       <RegForm
+        isLoading={props.isLoading}
         onRegister={props.onRegister}
         errorMessage={props.errorMessage}
         onClear={props.onClear}

@@ -7,16 +7,24 @@ class MainApi {
   }
 
   //  1. Загрузка информации о пользователе с сервера
-  getUserInfo() {
+  getUserInfo(token) {
     return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._headers,
+      headers: {
+        Accept: "application/json",
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
     }).then(this._getResponseData);
   }
 
   // 2. Возвращает все сохранённые текущим пользователем фильмы
-  getSavedMovies() {
+  getSavedMovies(token) {
     return fetch(`${this._baseUrl}/movies`, {
-      headers: this._headers,
+      headers: {
+        Accept: "application/json",
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
     }).then(this._getResponseData);
   }
 

@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from "react";
-
 import { useLocation } from "react-router-dom";
-
 import "./MoviesCard.css";
-
 import { MOVIES_URL } from "../../utils/constants";
 
-function MoviesCard(props) {
+function MoviesCard({
+  onMoviesLike,
+  onMovieDelete,
+  savedMovies,
+  movie,
+  saved,
+}) {
   let location = useLocation();
 
-  const movie = {
-    country: props.movie.country || " ",
-    director: props.movie.director || " ",
-    duration: props.movie.duration || 0,
-    year: props.movie.year || " ",
-    description: props.movie.description || " ",
-    image: `${MOVIES_URL}${props.movie.image?.url}` || " ",
-    trailerLink: props.movie.trailerLink || " ",
-    nameRU: props.movie.nameRU || " ",
-    nameEN: props.movie.nameEN || " ",
-    thumbnail:
-      `${MOVIES_URL}${props.movie.image?.formats?.thumbnail?.url}` || " ",
-    movieId: props.movie.id,
+  const film = {
+    country: movie.country || " ",
+    director: movie.director || " ",
+    duration: movie.duration || 0,
+    year: movie.year || " ",
+    description: movie.description || " ",
+    image: `${MOVIES_URL}${movie.image?.url}` || " ",
+    trailerLink: movie.trailerLink || " ",
+    nameRU: movie.nameRU || " ",
+    nameEN: movie.nameEN || " ",
+    thumbnail: `${MOVIES_URL}${movie.image?.formats?.thumbnail?.url}` || " ",
+    movieId: movie.id,
   };
 
-  const savedMovies = JSON.parse(localStorage.getItem("savedMovies"));
   const currentMovie = savedMovies?.find(
-    (movie) => movie.nameRU === props.movie.nameRU
+    (movi) => movi.nameRU === movie.nameRU
   );
   const [isLiked, setIsLiked] = useState(false);
 
@@ -41,17 +42,17 @@ function MoviesCard(props) {
   }`;
 
   function handleLikeAddClick() {
-    props.onMoviesLike(movie);
+    onMoviesLike(film);
     setIsLiked(true);
   }
 
   function handleDeleteClick() {
-    props.onMovieDelete(props.movie._id);
+    onMovieDelete(movie._id);
     setIsLiked(false);
   }
 
   function handleDisLike() {
-    props.onMovieDelete(currentMovie._id);
+    onMovieDelete(currentMovie._id);
     setIsLiked(false);
   }
 
@@ -63,26 +64,16 @@ function MoviesCard(props) {
 
   return (
     <section className="element">
-      <div className="element__video">
-        <a
-          href={props.movie.trailerLink}
-          className="element__link"
-          target="blank"
-        >
-          <img
-            alt={props.movie.nameRU}
-            className="element__img"
-            src={
-              props.saved
-                ? props.movie.image
-                : `${MOVIES_URL}${props.movie.image?.url}`
-            }
-          />
-        </a>
-      </div>
+      <a href={movie.trailerLink} className=" element__video" target="blank">
+        <img
+          alt={movie.nameRU}
+          className="element__img"
+          src={saved ? movie.image : `${MOVIES_URL}${movie.image.url}`}
+        />
+      </a>
 
       <div className="element__container">
-        <h2 className="element__title">{props.movie.nameRU}</h2>
+        <h2 className="element__title">{movie.nameRU}</h2>
 
         {location.pathname === "/saved-movies" && (
           <button
@@ -101,7 +92,7 @@ function MoviesCard(props) {
           ></button>
         )}
       </div>
-      <p className="element__time">{getTimeFromMins(props.movie.duration)}</p>
+      <p className="element__time">{getTimeFromMins(movie.duration)}</p>
     </section>
   );
 }
