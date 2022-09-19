@@ -1,0 +1,76 @@
+@import "../../vendor/fonts/fonts.css";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.error__title {
+  font-weight: normal;
+  font-size: 140px;
+  line-height: 169px;
+  margin: 246px auto 5px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .error__title {
+    margin: 408px auto 5px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .error__title {
+    font-size: 80px;
+    line-height: 97px;
+    margin: 329px auto 10px auto;
+  }
+}
+
+.error__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 auto 0 auto;
+}
+
+@media screen and (max-width: 320px) {
+  .error__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.error__nav {
+  display: flex;
+  border: none;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 184px auto 60px auto;
+  text-decoration: none;
+  color: rgba(52, 86, 243, 1);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  cursor: pointer;
+  transition: opacity, 0s, ease-out, 0.3;
+}
+
+@media screen and (max-width: 768px) {
+  .error__nav {
+    margin: 184px auto 222px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .error__nav {
+    margin: 284px auto 30px auto;
+  }
+}
+
+.error__nav:hover {
+  opacity: 0.7;
+}

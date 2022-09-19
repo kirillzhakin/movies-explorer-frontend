@@ -1,0 +1,57 @@
+@import "../../vendor/fonts/fonts.css";
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 52px;
+  background-color: rgba(221, 222, 227, 1);
+  background-image: url("../../images/landing-logo.svg");
+  background-position: right 70px bottom 60px;
+  background-repeat: no-repeat;
+  background-size: 722px 244px;
+}
+
+@media screen and (max-width: 768px) {
+  .promo {
+    height: 844px;
+    background-position: center bottom 70px;
+    background-size: 680px 230px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .promo {
+    height: 630px;
+    background-position: center bottom 40px;
+  }
+}
+
+.promo__title {
+  width: 626px;
+  color: #000000;
+  text-align: left;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 50px auto auto 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .promo__title {
+    text-align: center;
+    width: 88%;
+    margin: 300px auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .promo__title {
+    width: 300px;
+    font-size: 31px;
+    line-height: 39px;
+    margin: 183px auto 0 auto;
+  }
+}

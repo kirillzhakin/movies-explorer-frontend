@@ -1,0 +1,197 @@
+@import "../../vendor/fonts/fonts.css";
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(250, 250, 250, 1);
+}
+
+.aboutme__about {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  width: 89%;
+  height: 51px;
+  border-bottom: #000000 solid 1px;
+  margin: 110px auto 66px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme__about {
+    width: 87%;
+    margin: 90px auto 66px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutme__about {
+    width: 290px;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 70px auto 60px auto;
+  }
+}
+
+.aboutme__container {
+  display: flex;
+  width: 89%;
+  margin: 0 auto 100px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme__container {
+    margin: 0 auto 90px auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .aboutme__container {
+    margin: 0 auto 69px auto;
+    flex-direction: column;
+  }
+}
+
+.aboutme__summury {
+  display: flex;
+  flex-direction: column;
+  margin: 0 270px 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutme__summury {
+    margin: 0 100px 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme__summury {
+    margin: 0 49px 0 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .aboutme__summury {
+    max-width: 100%;
+    order: 1;
+    margin: 0;
+  }
+}
+
+.aboutme__img {
+  max-width: 270px;
+  max-height: 327px;
+  border-radius: 10px;
+  margin: 0 0 auto auto;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme__img {
+    max-width: 255px;
+    max-height: 307px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .aboutme__img {
+    order: 0;
+    max-width: 100%;
+    max-height: 352px;
+    margin: 0 auto 40px auto;
+  }
+}
+
+.aboutme__name {
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme__name {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutme__name {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.aboutme__work {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 18px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme__work {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 16px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutme__work {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 20px 0 0 0;
+  }
+}
+
+.aboutme__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 26px 0 99px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme__text {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 20px 0 87px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutme__text {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 20px 0 40px 0;
+  }
+}
+
+.aboutme__social-icons {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aboutme__social-icons_link {
+  margin: 0 20px 0 0;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  transition: opacity, 0s, ease-out, 0.3;
+}
+
+@media screen and (max-width: 320px) {
+  .aboutme__social-icons_link {
+    margin: 0 26px 0 0;
+  }
+}
+
+.aboutme__social-icons_link:hover {
+  opacity: 0.8;
+}

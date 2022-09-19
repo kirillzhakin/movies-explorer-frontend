@@ -1,0 +1,129 @@
+@import "../../vendor/fonts/fonts.css";
+
+.techs {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+@media screen and (max-width: 320px) {
+  .techs {
+    background-color: rgba(250, 250, 250, 1);
+  }
+}
+
+.techs__about {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  width: 89%;
+  height: 51px;
+  border-bottom: #000000 solid 1px;
+  margin: 100px auto 90px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__about {
+    width: 87%;
+    margin: 90px auto 80px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__about {
+    width: 290px;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 70px auto 60px auto;
+  }
+}
+
+.techs__text-seven {
+  max-width: 600px;
+  min-height: 58px;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+  margin: 0 auto 0 auto;
+}
+
+@media screen and (max-width: 370px) {
+  .techs__text-seven {
+    min-height: 30px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.techs__text {
+  max-width: 460px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  margin: 22px auto 83px auto;
+}
+
+@media screen and (max-width: 320px) {
+  .techs__text {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 24px auto 50px auto;
+  }
+}
+
+.techs__container {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  column-gap: 10px;
+  margin: 0 auto 100px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__container {
+    margin: 0 auto 90px auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .techs__container {
+    grid-template-columns: repeat(4, auto);
+    row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .techs__container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__container {
+    grid-template-columns: repeat(2, auto);
+    margin: 0 auto 70px auto;
+  }
+}
+
+.techs__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  width: 90px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgba(232, 232, 232, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .techs__box {
+    width: 84px;
+    height: 57px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
