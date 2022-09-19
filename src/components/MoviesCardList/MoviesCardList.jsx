@@ -19,10 +19,6 @@ function MoviesCardList({
 }) {
   let location = useLocation();
 
-  useEffect(() => {
-    window.addEventListener("resize", handleScreenWidth);
-  }, []);
-
   const [initialCardsCurrent, setInitialCardsCurrent] = useState(() => {
     const windowSize = window.innerWidth;
     if (windowSize < WINDOW_WIDTH.SMALL) {
@@ -48,6 +44,13 @@ function MoviesCardList({
       return ADDING_CARDS.MAX;
     }
   });
+
+  useEffect(() => {
+    window.addEventListener("resize", handleScreenWidth);
+    return () => {
+      window.removeEventListener("resize", handleScreenWidth);
+    };
+  }, []);
 
   function handleScreenWidth() {
     const windowSize = window.innerWidth;

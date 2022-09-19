@@ -5,8 +5,6 @@ import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
 import Portfolio from "../Portfolio/Portfolio";
 
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-
 function Main(props) {
   return (
     <main className="content">

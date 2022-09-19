@@ -3,8 +3,8 @@ import {
   Routes,
   Route,
   useNavigate,
-  Navigate,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import Layout from "../Layout/Layout";
@@ -30,24 +30,20 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
-
-  const [allMovies, setAllMovies] = React.useState(
+  const [allMovies, setAllMovies] = useState(
     JSON.parse(localStorage.getItem("loadedMovies")) || []
   );
   const [movies, setMovies] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
-  const [filteredMovies, setFilteredMovies] = React.useState(
+  const [filteredMovies, setFilteredMovies] = useState(
     JSON.parse(localStorage.getItem("filteredMovies")) || []
   );
-  const [searchKeyword, setSearchKeyword] = React.useState(
+  const [searchKeyword, setSearchKeyword] = useState(
     localStorage.getItem("searchKeyword") || ""
   );
-
-  const [loadingError, setLoadingError] = React.useState("");
-
+  const [loadingError, setLoadingError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingForm, setIsLoadingForm] = useState(false);
-
   const [profileMessage, setProfileMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(true);
   const [registerErrorMessage, setRegisterErrorMessage] = useState("");
@@ -142,7 +138,7 @@ function App() {
               });
           }
           setIsLoggedIn(true);
-          navigate(location.pathname);
+          navigate(location.pathname, { replace: true });
         })
         .catch((err) => {
           console.log(`${err}`);
@@ -230,14 +226,17 @@ function App() {
 
   // Запрос данных с сервера
   useEffect(() => {
-    if (isLoggedIn) {
+    if (isLoggedIn && allMovies.length === 0) {
       getInitialMovies();
-      getSavedMovies();
+    }
+    if (isLoggedIn && savedMovies.length === 0) {
+       getSavedMovies();
     }
     if (filteredMovies.length) {
       setMovies(filteredMovies);
     }
-  }, [filteredMovies, isLoggedIn]);
+    
+  }, [allMovies, filteredMovies, savedMovies, isLoggedIn]);
 
   // Добавить фильм в избранное
   function handleAddMovies(movie) {
@@ -300,16 +299,15 @@ function App() {
     setIsLoading(true);
     const newMovies = searchMovies(allMovies, name);
     if (newMovies.length === 0) {
-      setMovies(newMovies);
       localStorage.setItem("filteredMovies", JSON.stringify(newMovies));
       setFilteredMovies(newMovies);
       localStorage.setItem("searchKeyword", name);
       setSearchKeyword(name);
-      setIsLoading(false);
       setLoadingError("Ничего не найдено");
       setTimeout(() => {
         setLoadingError("");
       }, 3000);
+
       setMovies(newMovies);
       setIsLoading(false);
     } else if (newMovies.length !== 0) {
