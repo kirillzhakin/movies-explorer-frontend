@@ -52,7 +52,7 @@ cd <Имя-папки>
 - Склонируйте этот репозиторий:
 
 ```
-git clone https://github.com/kirillzhakin/movies-explorer-frontend.git
+git clone https://github.com/famovkin/movies-explorer-frontend.git
 ```
 
 - Установите все зависимости:
@@ -69,14 +69,9 @@ npm start или yarn start
 
 ## Системные требования
 
-Для запуска потребуется Node.js версии 18
+Для запуска потребуется Node.js версии 16.13.2.
 
-## Ссылки
 
-Ссылка на GitHub: https://github.com/kirillzhakin/movies-explorer-frontend.git
+## Ссылка
 
-Ссылка на макет: https://disk.yandex.ru/d/hPsps60gmVbvuQ
-
-Ссылка на сайт: http://kirillzhakin.diplom.nomoredomains.xyz
-
-Ссылка на сайт: https://kirillzhakin.diplom.nomoredomains.xyz
+https://famovkin.github.io/movies-explorer-frontend/

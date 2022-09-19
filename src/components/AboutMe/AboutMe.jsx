@@ -11,7 +11,7 @@ function AboutMe() {
           <p className="aboutme__work">Фронтенд-разработчик, 38 лет</p>
           <p className="aboutme__text">
             Я родился и живу в Кургане, закончил факультет транспортных систем
-            КГУ. У меня есть жена, дочь, еще дочь и сын. Люблю кодить.
+            КГУ. Люблю музыку и спорт.
           </p>
 
           <ul className="aboutme__social-icons">

@@ -9,8 +9,8 @@ function Layout(props) {
   let location = useLocation();
   return (
     <>
-      {location.pathname === "/" && <Header />}
-      {location.pathname !== "/" &&
+      {!props.isLoggedIn && location.pathname === "/" && <Header />}
+      {props.isLoggedIn &&
         location.pathname !== "/signup" &&
         location.pathname !== "/signin" && (
           <Navigation

@@ -111,3 +111,7 @@
 .register__input_password:invalid {
   color: rgba(238, 52, 101, 1);
 }
+
+.register__button_disabled {
+  opacity: 0.8;
+}
