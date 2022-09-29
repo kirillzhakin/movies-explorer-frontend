@@ -1,10 +1,10 @@
 # Movies Browser
 
-## Описание
+### Описание
 
 Movies Browser — cервис, в котором можно найти фильмы по запросу и сохранить в личном кабинете.
 
-## Функционал
+### Функционал
 
 - доступен на мобильных устройствах,
 - у всех интерактивных элементов есть анимация,
@@ -28,16 +28,11 @@ Movies Browser — cервис, в котором можно найти филь
 - при попытке перейти на несуществующую страницу происходит редирект на страницу «404».
 
 ## Технологии
-
-- React,
-- React Router,
-- Хуки (useState, useEffect, useContext),
-- использование кастомных хуков (валидация форм, получение ширины экрана),
-- использование локального хранилища,
-- работа с API,
-- HOC-компоненты,
-- БЭМ,
-- контроль версий в Git с использованием веток.
+![JavaScript](https://img.shields.io/badge/JavaScript-172F45?style=for-the-badge&logo=JavaScript)
+![REACT](https://img.shields.io/badge/React-172F45?style=for-the-badge&logo=react)
+![HTML](https://img.shields.io/badge/HTML-172F45?style=for-the-badge&logo=html5)
+![CSS](https://img.shields.io/badge/CSS-172F45?style=for-the-badge&logo=css3)
+![GIT](https://img.shields.io/badge/GIT-172F45?style=for-the-badge&logo=git)
 
 ## Инструкция
 
@@ -73,9 +68,9 @@ npm start или yarn start
 
 ## Ссылки
 
-Ссылка на GitHub: https://github.com/kirillzhakin/movies-explorer-frontend.git
+Репозиторий: [GitHub](https://github.com/kirillzhakin/movies-explorer-frontend.git)
 
-Ссылка на макет: https://disk.yandex.ru/d/hPsps60gmVbvuQ
+Макет: [Figma](https://www.figma.com/file/13wlmu4Z0acK9KBag7JMHb/Diploma-(Copy-1)?node-id=891%3A3857)
 
 Ссылка на сайт: http://kirillzhakin.diplom.nomoredomains.xyz
 
