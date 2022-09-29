@@ -27,14 +27,14 @@ Movies Browser — cервис, в котором можно найти филь
 - если пользователь был авторизован и закрыл вкладку, он может вернуться сразу на любую страницу приложения по URL-адресу, кроме страниц авторизации и регистрации,
 - при попытке перейти на несуществующую страницу происходит редирект на страницу «404».
 
-## Технологии
+### Технологии
 ![JavaScript](https://img.shields.io/badge/JavaScript-172F45?style=for-the-badge&logo=JavaScript)
 ![REACT](https://img.shields.io/badge/React-172F45?style=for-the-badge&logo=react)
 ![HTML](https://img.shields.io/badge/HTML-172F45?style=for-the-badge&logo=html5)
 ![CSS](https://img.shields.io/badge/CSS-172F45?style=for-the-badge&logo=css3)
 ![GIT](https://img.shields.io/badge/GIT-172F45?style=for-the-badge&logo=git)
 
-## Инструкция
+### Инструкция
 
 Чтобы запустить проект, нужно сделать несколько простых шагов.
 
@@ -62,7 +62,7 @@ yarn или npm install
 npm start или yarn start
 ```
 
-## Системные требования
+### Системные требования
 
 Для запуска потребуется Node.js версии 18
 
