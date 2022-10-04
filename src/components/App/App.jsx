@@ -229,14 +229,13 @@ function App() {
     if (isLoggedIn && allMovies.length === 0) {
       getInitialMovies();
     }
-    if (isLoggedIn && savedMovies.length === 0) {
-       getSavedMovies();
+    if (isLoggedIn) {
+      getSavedMovies();
     }
     if (filteredMovies.length) {
       setMovies(filteredMovies);
     }
-    
-  }, [allMovies, filteredMovies, savedMovies, isLoggedIn]);
+  }, [allMovies, filteredMovies, isLoggedIn]);
 
   // Добавить фильм в избранное
   function handleAddMovies(movie) {
