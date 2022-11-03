@@ -27,7 +27,7 @@ function AboutMe() {
 
             <li>
               <a
-                href="https://github.com"
+                href="https://github.com/kirillzhakin"
                 className="aboutme__social-icons_link"
                 target="blank"
               >

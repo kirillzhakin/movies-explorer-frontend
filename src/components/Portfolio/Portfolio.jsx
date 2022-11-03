@@ -11,7 +11,7 @@ function Portfolio() {
       <ul className="portfolio__links">
         <li className="portfolio__link-box">
           <a
-            href="https://github.com/kirillzhakin/first-project"
+            href="https://github.com/kirillzhakin/how-to-learn"
             className="portfolio__link"
             target="blank"
           >
@@ -21,7 +21,7 @@ function Portfolio() {
         </li>
         <li className="portfolio__link-box">
           <a
-            href="https://github.com/kirillzhakin/second-project"
+            href="https://github.com/kirillzhakin/russian-travel"
             className="portfolio__link"
             target="blank"
           >
@@ -31,7 +31,7 @@ function Portfolio() {
         </li>
         <li className="portfolio__link-box">
           <a
-            href="https://github.com/kirillzhakin/mesto"
+            href="https://github.com/kirillzhakin/react-mesto-auth"
             className="portfolio__link"
             target="blank"
           >
