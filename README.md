@@ -73,4 +73,4 @@ npm start или yarn start
 
 Макет: [Figma](<https://www.figma.com/file/13wlmu4Z0acK9KBag7JMHb/Diploma-(Copy-1)?node-id=891%3A3857>)
 
-Сайт:
+Сайт: https://movies-explorer-frontend-phi.vercel.app/
