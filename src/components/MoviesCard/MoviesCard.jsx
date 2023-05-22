@@ -64,7 +64,7 @@ function MoviesCard({
 
   return (
     <section className="element">
-      <a href={movie.trailerLink} className=" element__video" target="blank">
+      <a href={movie.trailerLink} className="element__video" target="blank">
         <img
           alt={movie.nameRU}
           className="element__img"

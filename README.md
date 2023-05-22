@@ -28,6 +28,7 @@ Movies Browser — cервис, в котором можно найти филь
 - при попытке перейти на несуществующую страницу происходит редирект на страницу «404».
 
 ### Технологии
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-172F45?style=for-the-badge&logo=JavaScript)
 ![REACT](https://img.shields.io/badge/React-172F45?style=for-the-badge&logo=react)
 ![HTML](https://img.shields.io/badge/HTML-172F45?style=for-the-badge&logo=html5)
@@ -70,8 +71,6 @@ npm start или yarn start
 
 Репозиторий: [GitHub](https://github.com/kirillzhakin/movies-explorer-frontend.git)
 
-Макет: [Figma](https://www.figma.com/file/13wlmu4Z0acK9KBag7JMHb/Diploma-(Copy-1)?node-id=891%3A3857)
+Макет: [Figma](<https://www.figma.com/file/13wlmu4Z0acK9KBag7JMHb/Diploma-(Copy-1)?node-id=891%3A3857>)
 
-Ссылка на сайт: http://kirillzhakin.diplom.nomoredomains.xyz
-
-Ссылка на сайт: https://kirillzhakin.diplom.nomoredomains.xyz
+Сайт:
